@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<configure xmlns="http://namespaces.zope.org/zope">
+
+    <utility
+        factory=".actions.HttpBinAction"
+        provides="Products.ZenModel.interfaces.IAction"
+        name="HttpBin"
+        />
+
+    <adapter
+        for="Products.ZenModel.NotificationSubscription.NotificationSubscription"
+        provides=".interface.IHttpBinActionContentInfo"
+        factory=".info.HttpBinActionContentInfo"
+        />
+
+</configure>
